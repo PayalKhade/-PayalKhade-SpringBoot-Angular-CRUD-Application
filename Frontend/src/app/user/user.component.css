@@ -1,0 +1,25 @@
+p{
+  color: black;
+  
+}
+
+table, th, td {
+    border: 2px solid black;
+    
+  }
+
+button{
+  background-color: white;
+} 
+
+table{
+  border-radius: 25px;
+}
+
+.nav-link{
+  color: black;
+}
+
+.adduser{
+  text-align: right;
+}

@@ -1,0 +1,36 @@
+<p>Update Details</p>
+<br>
+<div  >
+   <form (ngSubmit)="onSubmit()">  
+
+
+
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="user.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="user.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">EmaiId</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="user.emailId" name="emailId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Contact No</label>
+      <input type="text" class="form-control" id="contactNo" required [(ngModel)]="user.contactNo" name="contactNo">
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-success" >Update</button>&nbsp;&nbsp;&nbsp;
+    <!-- <button type="cancel" class="btn btn-danger" >Cancel</button> -->
+  </form>
+</div>
+
+ 
+
+ 

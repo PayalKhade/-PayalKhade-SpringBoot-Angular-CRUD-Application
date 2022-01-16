@@ -1,0 +1,48 @@
+<h1>Add User</h1>
+<div  [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)=" form.valid && onSubmit()" [formGroup]="form">
+
+    <div class="form-group">
+      <label for="name">UserId</label>
+      <input type="text" class="form-control" formControlName="UserId" [ngClass]="{'is-invalid':form.get('UserId')}" 
+      id="UserId" [(ngModel)]="user.id" name="UserId" required/>
+    </div>
+    <div class="invalid-feedback"> 
+      <div>UserId is required</div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" formControlName="firstName" [ngClass]="{'is-invalid':form.get('firstName')}" 
+      id="firstName" [(ngModel)]="user.firstName" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName" [ngClass]="{'is-invalid':form.get('lastName')}"
+      required [(ngModel)]="user.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">EmaiId</label>
+      <input type="text" class="form-control" id="emailId" formControlName="emailId" [ngClass]="{'is-invalid':form.get('emailId')}" 
+      required [(ngModel)]="user.emailId" name="emailId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Contact No</label>
+      <input type="text" class="form-control" id="contactNo" formControlName="contactNo" [ngClass]="{'is-invalid':form.get('contactNo')}" 
+      required [(ngModel)]="user.contactNo" name="contactNo">
+    </div>
+
+    <button type="submit" [disabled]="!form.valid" class="btn btn-success" >Submit</button>
+    &nbsp;&nbsp;&nbsp;
+    <!-- <button type="cancel"  class="btn btn-danger" >Cancel</button> -->
+  </form>
+</div>
+
+<!-- <div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div> -->
+
